@@ -37,6 +37,6 @@ jobs:
 
       - name: publish
         run: |
-          gem push *.gem --otp $(rotp --secret ${GEM_HOST_OTP_SECRET})"
+          gem push *.gem --otp $(rotp --secret ${GEM_HOST_OTP_SECRET})
         env:
           GEM_HOST_OTP_SECRET: ${{secrets.RUBYGEMS_OTP_SECRET}}
